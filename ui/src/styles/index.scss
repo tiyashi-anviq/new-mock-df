@@ -1,0 +1,35 @@
+@use '@carbon/react';
+@use '@carbon/react/scss/type';
+
+body { margin: 0; }
+
+// Page area: 3rem header on top, 16rem rail on the left (the rail is fixed).
+.app-content {
+  margin: 3rem 0 0 16rem;
+  padding: 2rem;
+  min-height: calc(100vh - 3rem);
+  box-sizing: border-box;
+}
+
+.page-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+.page-crumb { @include type.type-style('label-01'); color: var(--cds-text-secondary); margin: 0 0 0.25rem; }
+.page-title { @include type.type-style('heading-05'); margin: 0; }
+.page-sub { @include type.type-style('body-01'); color: var(--cds-text-secondary); margin: 0.25rem 0 0; }
+
+.card {
+  background: var(--cds-layer-01);
+  border: 1px solid var(--cds-border-subtle-01);
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+}
+.card-title { @include type.type-style('heading-03'); margin: 0 0 0.5rem; }
+.muted { @include type.type-style('body-01'); color: var(--cds-text-secondary); margin: 0 0 0.75rem; }
+.plain-list { list-style: none; padding: 0; margin: 0; }
+.plain-list li { @include type.type-style('body-01'); padding: 0.25rem 0; }
